@@ -1,8 +1,7 @@
 var initRange="1-30";
 var isUsed = new Array(30)
 
-function getRnage(){
-    
+function getRnage(){    
     let i= ""
     i=document.getElementById("p-range").value;
     let tmp=""
@@ -16,9 +15,60 @@ function getRnage(){
     }
     return tmp;
 }
- function submit(event) {
-      event.preventDefault();
+ function submit($event) {
+      this.event.preventDefault();
     }
+function isSelected(){ 
+    document.getElementById("item0").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    document.getElementById("item1").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    document.getElementById("item2").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    document.getElementById("item3").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    document.getElementById("item4").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    document.getElementById("item5").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    document.getElementById("item6").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    document.getElementById("item7").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    document.getElementById("item8").onclick=()=>{
+        this.classList.toggle("bg-danger");
+    }
+    
+
+    
+}
+        
+    
+
+
+function changeMode() {
+    let open=document.getElementById("mode");
+    open = parseInt(open.value)
+    if(open){
+        var inputs =document.querySelectorAll(".bingo-box")
+        console.log(inputs)}
+        
+        for(let input of inputs){
+            input.readOnly = !input.readOnly;
+            console.log(input.readOnly)
+        }
+    
+}
+    
+
 
 
 
